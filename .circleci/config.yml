@@ -8,6 +8,6 @@ jobs:
                         - checkout
                         - setup_remote_docker
                         - run: |
-                                docker build -t Dcoder-D/friendsmoment .
+                                docker build -t dlinhao/friendsmoment .
                                 docker login -u="DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
                                 docker push dlinhao/friendsmoment
