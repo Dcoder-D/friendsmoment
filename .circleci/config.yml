@@ -9,5 +9,5 @@ jobs:
                         - setup_remote_docker
                         - run: |
                                 docker build -t Dcoder-D/friendsmoment .
-                                docker login -u="dlinhao" -p="C23aid7@1314"
+                                docker login -u="DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
                                 docker push dlinhao/friendsmoment
