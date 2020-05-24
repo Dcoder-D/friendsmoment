@@ -1,0 +1,13 @@
+version: 2
+jobs:
+        build:
+                docker:
+                        -image:circleci/golang: 1.9
+                working_directory: /go/src/github.com/Dcoder-D/friendsmoment
+                steps:
+                        -checkout
+                        -setup_remote_docker
+                -run: |
+                        docker build -t Dcoder-D/friendsmoment .
+                        docker login -u="dlinhao" -p="C23aid7@1314"
+                        docker push dlinhao/friendsmoment
