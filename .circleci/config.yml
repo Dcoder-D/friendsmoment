@@ -3,12 +3,12 @@ jobs:
         build:
                 docker:
                         - image: circleci/golang:1.9
-                          working_directory: /go/src/github.com/Dcoder-D/friendsment
-                          steps:
-                                  - checkout
-                                  - setup_remote_docker
-                                  - run: |
-                                          docker build -t dlinhao/friendsmoment .
-                                          docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
-                                          docker push dlinhao/friendsmoment
+                working_directory: /go/src/github.com/Dcoder-D/friendsment
+                steps:
+                        - checkout
+                        - setup_remote_docker
+                        - run: |
+                                docker build -t dlinhao/friendsmoment .
+                                docker login -u="$DOCKERHUB_USERNAME" -p="$DOCKERHUB_PASSWORD"
+                                docker push dlinhao/friendsmoment
 
